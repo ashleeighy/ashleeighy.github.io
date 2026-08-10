@@ -1,0 +1,197 @@
+body{
+  margin: 125px;
+}
+/*----------------------------------------------------------------------turn sizes adaptable so they adjust with the page changing size/ minimizing the stars too*/
+/*HOME PAGE----------------------------------------------------------------------*/
+.head{
+  display: flex;
+  gap: 10px;
+  margin: -50px 0 -50px;
+  pointer-events: none;
+}
+
+.carousel{
+  width: 90%;
+  display: flex;
+  overflow-x: auto;
+}
+
+.carousel::-webkit-scrollbar{
+  display: none;
+}
+
+.group{
+  display: flex;
+  align-items: center;
+  gap: 5em;
+  animation: spin 10s infinite linear;
+  padding-right: 5em;
+}
+
+.card{
+  flex: 0 0 5em;
+  height: 75px;
+  background-image: url("star-64.png");
+  background-size: cover;       
+  background-position: center;   
+}
+
+@keyframes spin {
+  from {translate: 0;}
+  to {translate: -100%;}
+}
+
+.home-container {
+  display: flex;
+  gap: 25px;
+}
+
+.pic p{
+  text-align: center;
+  margin-top: -1px;
+}
+
+.nav-button{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button{
+  background-color: lightgrey;
+  width: 250px;
+  padding: 15px 0px 15px;
+  text-decoration: none;
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.button:hover{
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
+}
+
+.yum{
+  background-color: #d9d9d9;
+  padding: 15px;
+  margin-top: 150px;
+}
+
+.yum h4{
+  margin: -15px -15px 0 -15px;
+  padding: 5px;
+  background-color: #b3b3b3;
+}
+/*PROJECTS PAGE---------------------------------------------------------------*/
+.home-link{
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.titles{
+  margin-bottom: -50px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(3, 150px);
+  gap: 10px;
+}
+
+.projects-container div {
+  background-color: #f1f1f1;
+  padding: 10px;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
+}
+
+.projects-container div:hover{
+  box-shadow: none;
+}
+
+/*Left column*/
+.item1 {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: -75px;
+}
+
+.item2 {
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 75px;
+  margin-bottom: -160px;
+}
+
+/*Right column*/
+.item4 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.item5 {
+  grid-column: 2;
+  grid-row: 3;
+}
+/*LINK AND CONTACT POPUP----------------------------------------------------------------*/
+.popup{
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.popup-inner{
+  background: #FFF;
+  padding: 32px 16px;
+  width: 500px;
+  height: 125px;
+}
+
+.popup:target{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup h3{
+  background-color: #b3b3b3;
+  margin: -32px -16px 5px -16px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.exit{
+  text-align: right;
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: 305px;
+  right: 508px;
+}
+
+.exit:hover{
+  font-size: 20px;
+}
+
+.outside{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 25px 0 25px;
+}
+
+.outside img{
+  width: 75px;
+  height: 75px;
+}
